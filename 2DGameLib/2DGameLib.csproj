@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_2DGameLib</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ChangeCreatureState\DefenseItemChangeState.cs~RF19711c7.TMP" />
+    <None Remove="ChangeCreatureState\MakeCreatureFast.cs~RF16fb608.TMP" />
+    <None Remove="Creature.cs~RF7c16e8.TMP" />
+    <None Remove="Creature.cs~RF8a12dc.TMP" />
+    <None Remove="DefenceItem.cs~RFe2984d.TMP" />
+    <None Remove="DefenceItem.cs~RFeac5af.TMP" />
+    <None Remove="Interfaces\IDefenseItem.cs~RF14f5d64.TMP" />
+    <None Remove="Interfaces\IDefenseItem.cs~RF15cd1da.TMP" />
+    <None Remove="MakeCreatureFast.cs~RF155eb11.TMP" />
+    <None Remove="ReadConfiguration.cs~RF2719e3.TMP" />
+    <None Remove="World.cs~RF689afd.TMP" />
+    <None Remove="World.cs~RF802413.TMP" />
+    <None Remove="WorldObject.cs~RF6d50ae.TMP" />
+  </ItemGroup>
+
+</Project>
