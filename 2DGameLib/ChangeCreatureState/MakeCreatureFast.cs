@@ -8,22 +8,22 @@ using _2DGameLib.Interfaces;
 
 namespace _2DGameLib
 {
-    class MakeCreatureFast : AttackItemChangeState
+    class MakeCreatureFast : IAttackItem
     {
         /// <summary>
         /// Reference to AttackItem class to access its attributes.
         /// </summary>
-        private readonly AttackItem attackItem = new AttackItem();
+        //private readonly AttackItem attackItem = new AttackItem();
 
         /// <summary>
-        /// Implements abstract method from AttackItemChangeState
+        /// Implements method from IAttackItem interface.
         /// </summary>
         /// <param name="attackItemName"></param>
         /// <returns></returns>
-        public override string ChangeCreatureState(string attackItemName)
+        public string ChangeCreatureState(/*string attackItemName*/)
         {
-            if (attackItemName == attackItem.Name) return "You have super speed!";
-            return null;
+            //if (attackItemName == attackItem.Name) return null;
+            return "You have lightning speed!";
         }
     }
 }

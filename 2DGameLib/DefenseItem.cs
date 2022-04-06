@@ -9,11 +9,16 @@ namespace _2DGameLib
     public class DefenseItem : WorldObject
     {
         /// <summary>
-        /// Properties of the defense items a creature has.
+        /// Properties of a defense item.
         /// </summary>
         public string Name { get; set; }
         public int ReduceHitpoint { get; set; }
         public string Description { get; set; }
+
+        public DefenseItem()
+        {
+
+        }
 
     }
 }

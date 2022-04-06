@@ -11,5 +11,10 @@ namespace _2DGameLib
         public bool Lootable { get; set; }
         public string Name { get; set; }
         public bool Removable { get; set; }
+
+        public WorldObject()
+        {
+
+        }
     }
 }

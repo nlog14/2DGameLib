@@ -11,6 +11,11 @@ namespace _2DGameLib
         public int MaxX { get; set; }
         public int MaxY { get; set; }
 
+        public World()
+        {
+
+        }
+
         public static void GetConfiguration()
         {
             ReadConfiguration.ReadConfig();

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace _2DGameLib.Interfaces
 {
+    /// <summary>
+    /// Template Design Pattern
+    /// </summary>
     public interface ICreature
     {
         public void Attack(Creature enemy);

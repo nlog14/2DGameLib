@@ -11,10 +11,39 @@ namespace _2DGameLib
     {
         public int Hitpoints { get; set; }
         public string Name { get; set; }
+        public CreatureStateEnum CurrentStateEnum { get; set; }
+        public List<CreatureStateEnum> creatureStates { get; set; }
+        public AttackItemsEnum currentAttackItem { get; set; }
+        public Dictionary<AttackItemsEnum, IAttackItem> creatureStateAttacking { get; }
+
+        public Creature(CreatureStateEnum initialStateEnum = CreatureStateEnum.idle, AttackItemsEnum initialStateAttackItem = AttackItemsEnum.emptyHanded)
+        {
+            CurrentStateEnum = initialStateEnum;
+            creatureStates = new List<CreatureStateEnum>();
+            currentAttackItem = initialStateAttackItem;
+            creatureStateAttacking = new Dictionary<AttackItemsEnum, IAttackItem>();
+        }
 
         public List<AttackItem> attackItems = new List<AttackItem>();
         public List<DefenseItem> defenceItems = new List<DefenseItem>();
-        
+
+        public void SetCreaturesStateAttacking(AttackItemsEnum state, IAttackItem behavior )
+        {
+            creatureStateAttacking[state] = behavior;
+        }
+
+        public void ActBehavior()
+        {
+            if (creatureStateAttacking.ContainsKey(currentAttackItem))
+            {
+                creatureStateAttacking[currentAttackItem].ChangeCreatureState();
+            }
+            else
+            {
+                throw new Exception($"No behavior defined for state {currentAttackItem}");
+            }
+        }
+
         /// <summary>
         /// Calculates the points a creature gains when attacking their enemy.
         /// </summary>

@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="AttackItem.cs~RF8b1bff.TMP" />
+    <None Remove="ChangeCreatureState\AnimalBehaviorFactory.cs~RF7caa9c.TMP" />
     <None Remove="ChangeCreatureState\DefenseItemChangeState.cs~RF19711c7.TMP" />
     <None Remove="ChangeCreatureState\DefenseItemChangeState.cs~RF1bca5c5.TMP" />
     <None Remove="ChangeCreatureState\MakeCreatureExtraStrong.cs~RF1b448a8.TMP" />
@@ -14,6 +16,11 @@
     <None Remove="Creature.cs~RF8a12dc.TMP" />
     <None Remove="DefenceItem.cs~RFe2984d.TMP" />
     <None Remove="DefenceItem.cs~RFeac5af.TMP" />
+    <None Remove="Interfaces\AttackItemsEnum.cs~RF4b4c3e.TMP" />
+    <None Remove="Interfaces\AttackItemsEnum.cs~RF4f7e96.TMP" />
+    <None Remove="Interfaces\IAttackItem.cs~RF3a87f2.TMP" />
+    <None Remove="Interfaces\IAttackItem.cs~RF3b8c81.TMP" />
+    <None Remove="Interfaces\IAttackItem.cs~RF5ceec5.TMP" />
     <None Remove="Interfaces\IDefenseItem.cs~RF14f5d64.TMP" />
     <None Remove="Interfaces\IDefenseItem.cs~RF15cd1da.TMP" />
     <None Remove="MakeCreatureFast.cs~RF155eb11.TMP" />

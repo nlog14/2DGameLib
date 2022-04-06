@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace _2DGameLib.Interfaces
 {
-    /// <summary>
-    /// Strategy Design Pattern
-    /// </summary>
-    //interface IDefenseItem
-    //{ 
-    //   
-    //}
+    public enum CreatureStateEnum
+    {
+        idle,
+        active,
+    }
 }
