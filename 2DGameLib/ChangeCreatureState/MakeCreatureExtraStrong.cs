@@ -8,21 +8,21 @@ using _2DGameLib.Interfaces;
 
 namespace _2DGameLib
 {
-    class MakeCreatureExtraStrong : DefenseItemChangeState 
+    class MakeCreatureExtraStrong : AttackItemChangeState 
     {
         /// <summary>
-        /// Reference to DefenseItem class to access its attributes.
+        /// Reference to AttackItem class to access its attributes.
         /// </summary>
-        private readonly DefenseItem defenseItem = new DefenseItem();
+        private readonly AttackItem attackItem = new AttackItem();
 
         /// <summary>
-        /// Implements abstract method from DefenseItemChangeState
+        /// Implements abstract method from AttackItemChangeState
         /// </summary>
-        /// <param name="defenseItemName"></param>
+        /// <param name="attackItemName"></param>
         /// <returns></returns>
-        public override string ChangeCreatureState(string defenseItemName)
+        public override string ChangeCreatureState(string attackItemName)
         {
-            if (defenseItemName == defenseItem.Name) return "You have extra strength!";
+            if (attackItemName == attackItem.Name) return "You have extra strength!";
             return null;
         }
     }

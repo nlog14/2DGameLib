@@ -12,24 +12,24 @@ namespace _2DGameLib.ChangeCreatureState
         /// <summary>
         /// Reference to abstract class that concrete strategy classes inherit.
         /// </summary>
-        private DefenseItemChangeState defenseItemChangeState;
+        private AttackItemChangeState _attackItemChangeState;
 
         /// <summary>
-        /// Constructor to initialize strategy object defenseItemChange.
+        /// Constructor to initialize strategy object attackItemChange.
         /// </summary>
-        /// <param name="_defenseItemChangeState"></param>
-        public ContextChangeCreatureState(DefenseItemChangeState _defenseItemChangeState)
+        /// <param name="attackItemChangeState"></param>
+        public ContextChangeCreatureState(AttackItemChangeState attackItemChangeState)
         {
-            this.defenseItemChangeState = _defenseItemChangeState;
+            this._attackItemChangeState = attackItemChangeState;
         }
 
         /// <summary>
         /// Executes the strategy object method.
-        /// Communicates strictly with the abstract class DefenseItemChangeState.
+        /// Communicates strictly with the abstract class AttackItemChangeState.
         /// </summary>
-        /// <param name="defenseItemName"></param>
+        /// <param name="attackItemName"></param>
         /// <returns></returns>
-        public string ExecuteStateChange(string defenseItemName) =>
-            defenseItemChangeState.ChangeCreatureState(defenseItemName);
+        public string ExecuteChangeCreatureState(string attackItemName) =>
+            _attackItemChangeState.ChangeCreatureState(attackItemName);
     }
 }

@@ -11,8 +11,8 @@ namespace _2DGameLib.ChangeCreatureState
     /// Common class that declares the method the context (ContextChangeCreatureState)
     /// and concrete strategy classes implement (MakeCreatureExtraStrong & MakeCreatureFast)
     /// </summary>
-    abstract class DefenseItemChangeState
+    abstract class AttackItemChangeState
     {
-        public abstract string ChangeCreatureState(string defenseItemName);
+        public abstract string ChangeCreatureState(string attackItemName);
     }
 }
