@@ -10,6 +10,9 @@ namespace _2DGameLib
 {
     public class ReadConfiguration
     {
+        public static int MinWorldSize { get; private set; }
+        public static int MaxWorldSize { get; private set; }
+
         /// <summary>
         /// Uses variable path set in the system's environment variables.
         /// Reads application configuration from a configuration file.
@@ -27,21 +30,21 @@ namespace _2DGameLib
             if (minWorldSize != null)
             {
                 string str = minWorldSize.InnerText.Trim();
-                int minimumWorldSize = Convert.ToInt32(str);
+                MinWorldSize = Convert.ToInt32(str);
             }
 
             XmlNode maxWorldSize = configDoc.DocumentElement.SelectSingleNode("MaxWorldSize");
             if (maxWorldSize != null)
             {
                 string str = maxWorldSize.InnerText.Trim();
-                int maximumWorldSize = Convert.ToInt32(str);
+                MaxWorldSize  = Convert.ToInt32(str);
             }
 
-            XmlNode creatureName = configDoc.DocumentElement.SelectSingleNode("CreatureName");
-            if (creatureName != null)
-            {
-                string str = creatureName.InnerText.Trim();
-            }
+            //XmlNode creatureName = configDoc.DocumentElement.SelectSingleNode("CreatureName");
+            //if (creatureName != null)
+            //{
+            //    string str = creatureName.InnerText.Trim();
+            //}
         }
 
     }

@@ -27,7 +27,7 @@ namespace _2DGameLib
         public List<AttackItem> attackItems = new List<AttackItem>();
         public List<DefenseItem> defenceItems = new List<DefenseItem>();
 
-        public void SetCreaturesStateAttacking(WorldObjectsEnum state, IWorldObjects behavior )
+        public void SetCreaturesStateWithWorldObj(WorldObjectsEnum state, IWorldObjects behavior )
         {
             creatureStateWithWorldObj[state] = behavior;
         }

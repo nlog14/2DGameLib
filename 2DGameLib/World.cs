@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,13 @@ namespace _2DGameLib
 
         }
 
-        public static void GetConfiguration()
+        public void GetConfiguration()
         {
             ReadConfiguration.ReadConfig();
+            MaxX = ReadConfiguration.MaxWorldSize;
+            MaxY = ReadConfiguration.MinWorldSize;
+
+            Trace.ApplicationLog(TraceEventType.Information, "The world was created with x and y values");
         }
     }
 }

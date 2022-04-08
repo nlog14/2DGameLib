@@ -26,12 +26,15 @@ namespace _2DGameLib
             ts.Listeners.Add(fileLog);
         }
 
-        public static void Log()
+        public static void ApplicationLog(TraceEventType traceEventType, string message)
         {
-            ts.TraceEvent(TraceEventType.Information, 555, "This is information");
-            ts.TraceEvent(TraceEventType.Error, 555, "This is an error");
-            ts.TraceEvent(TraceEventType.Critical, 555, "This is critical");
-            ts.TraceEvent(TraceEventType.Warning, 555, "This is a warning");
+            
+            ts.TraceEvent(traceEventType, 555, message);
+           
+            //ts.TraceEvent(TraceEventType.Information, 555, "This is information");
+            //ts.TraceEvent(TraceEventType.Error, 555, "This is an error");
+            //ts.TraceEvent(TraceEventType.Critical, 555, "This is critical");
+            //ts.TraceEvent(TraceEventType.Warning, 555, "This is a warning");
 
             ts.Close();
         }
