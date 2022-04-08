@@ -12,35 +12,35 @@ namespace _2DGameLib
         public int Hitpoints { get; set; }
         public string Name { get; set; }
         public CreatureStateEnum CurrentStateEnum { get; set; }
-        public List<CreatureStateEnum> creatureStates { get; set; }
-        public AttackItemsEnum currentAttackItem { get; set; }
-        public Dictionary<AttackItemsEnum, IAttackItem> creatureStateAttacking { get; }
+        public List<CreatureStateEnum> CreatureStates { get; set; }
+        public WorldObjectsEnum CurrentWorldObject { get; set; }
+        public Dictionary<WorldObjectsEnum, IWorldObjects> creatureStateWithWorldObj { get; }
 
-        public Creature(CreatureStateEnum initialStateEnum = CreatureStateEnum.idle, AttackItemsEnum initialStateAttackItem = AttackItemsEnum.emptyHanded)
+        public Creature(CreatureStateEnum initialStateEnum = CreatureStateEnum.idle, WorldObjectsEnum initialStateWorldObject = WorldObjectsEnum.emptyHanded)
         {
             CurrentStateEnum = initialStateEnum;
-            creatureStates = new List<CreatureStateEnum>();
-            currentAttackItem = initialStateAttackItem;
-            creatureStateAttacking = new Dictionary<AttackItemsEnum, IAttackItem>();
+            CreatureStates = new List<CreatureStateEnum>();
+            CurrentWorldObject = initialStateWorldObject;
+            creatureStateWithWorldObj = new Dictionary<WorldObjectsEnum, IWorldObjects>();
         }
 
         public List<AttackItem> attackItems = new List<AttackItem>();
         public List<DefenseItem> defenceItems = new List<DefenseItem>();
 
-        public void SetCreaturesStateAttacking(AttackItemsEnum state, IAttackItem behavior )
+        public void SetCreaturesStateAttacking(WorldObjectsEnum state, IWorldObjects behavior )
         {
-            creatureStateAttacking[state] = behavior;
+            creatureStateWithWorldObj[state] = behavior;
         }
 
         public void ActBehavior()
         {
-            if (creatureStateAttacking.ContainsKey(currentAttackItem))
+            if (creatureStateWithWorldObj.ContainsKey(CurrentWorldObject))
             {
-                creatureStateAttacking[currentAttackItem].ChangeCreatureState();
+                creatureStateWithWorldObj[CurrentWorldObject].ChangeCreatureState();
             }
             else
             {
-                throw new Exception($"No behavior defined for state {currentAttackItem}");
+                throw new Exception($"No behavior defined for state {CurrentWorldObject}");
             }
         }
 

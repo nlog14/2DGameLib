@@ -8,23 +8,12 @@ using _2DGameLib.Interfaces;
 
 namespace _2DGameLib
 {
-    class MakeCreatureExtraStrong : IAttackItem
+    class MakeCreatureExtraStrong : IWorldObjects
     {
-        /// <summary>
-        /// Reference to AttackItem class to access its attributes.
-        /// </summary>
-        //private readonly AttackItem attackItem = new AttackItem();
-
-        /// <summary>
-        /// Implements method from IAttackItem interface.
-        /// </summary>
-        /// <param name="attackItemName"></param>
-        /// <returns></returns>
-        public string ChangeCreatureState(/*string attackItemName*/)
+        
+        public string ChangeCreatureState()
         {
-            //if (attackItemName == attackItem.Name) return null;
             return "You have super strength!";
-          
         }
     }
 }

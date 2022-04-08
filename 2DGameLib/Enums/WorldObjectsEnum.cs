@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace _2DGameLib.Interfaces
 {
-    public enum AttackItemsEnum
+    public enum WorldObjectsEnum
     {
         emptyHanded,
         lightningBolt,
-        hammer,
-        sword,
-
+        mushroom
     }
 }
