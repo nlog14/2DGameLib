@@ -8,6 +8,6 @@ namespace _2DGameLib.Interfaces
 {
     interface IWeaponFactory
     {
-        IWeapon Create(WeaponType type);
+        IWeapon CreateWeapon(WeaponType type);
     }
 }

@@ -28,14 +28,7 @@ namespace _2DGameLib
 
         public static void ApplicationLog(TraceEventType traceEventType, string message)
         {
-            
             ts.TraceEvent(traceEventType, 555, message);
-           
-            //ts.TraceEvent(TraceEventType.Information, 555, "This is information");
-            //ts.TraceEvent(TraceEventType.Error, 555, "This is an error");
-            //ts.TraceEvent(TraceEventType.Critical, 555, "This is critical");
-            //ts.TraceEvent(TraceEventType.Warning, 555, "This is a warning");
-
             ts.Close();
         }
     }

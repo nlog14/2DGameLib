@@ -39,8 +39,4 @@
     <None Remove="WorldObject.cs~RF6d50ae.TMP" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="WeaponsFactory\" />
-  </ItemGroup>
-
 </Project>

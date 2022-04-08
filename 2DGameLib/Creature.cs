@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using _2DGameLib.Interfaces;
 
 namespace _2DGameLib
 {
-    public class Creature : Position, ICreature
+    public class Creature : ICreature
     {
         public int Hitpoints { get; set; }
         public string Name { get; set; }
@@ -17,7 +18,6 @@ namespace _2DGameLib
         public Dictionary<WorldObjectsEnum, IWorldObjects> creatureStateWithWorldObj { get; }
         public Position PositionX { get; set; }
         public Position PositionY { get; set; }
-
 
         public Creature(string name, Position positionX, Position positionY, WorldObjectsEnum initialStateWorldObject = WorldObjectsEnum.emptyHanded)
         {
@@ -33,9 +33,9 @@ namespace _2DGameLib
         public List<AttackItem> attackItems = new List<AttackItem>();
         public List<DefenseItem> defenceItems = new List<DefenseItem>();
 
-        public void SetCreaturesStateWithWorldObj(WorldObjectsEnum state, IWorldObjects behavior )
+        public void SetCreaturesStateWithWorldObj(WorldObjectsEnum worldObj, IWorldObjects behavior )
         {
-            creatureStateWithWorldObj[state] = behavior;
+            creatureStateWithWorldObj[worldObj] = behavior;
         }
 
         public void ActBehavior()
@@ -96,6 +96,7 @@ namespace _2DGameLib
         /// <returns></returns>
         public bool IsDead()
         {
+            Trace.ApplicationLog(TraceEventType.Information, "Oh no! you died :(");
             return Hitpoints is <= 0;
         }
     }

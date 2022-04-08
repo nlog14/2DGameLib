@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2DGameLib.Interfaces
 {
-    interface IWeapon
+    public interface IWeapon
     {
         /// <summary>
         /// Factory Design Pattern

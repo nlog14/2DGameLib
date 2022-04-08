@@ -16,10 +16,6 @@ namespace _2DGameLib
         public abstract int Damage{ get; } //-1
         public abstract string Description { get; }
 
-        public DefenseItem()
-        {
-
-        }
         public override string ToString()
         {
             return $"{Name}:{Description}, dealing {Damage} damage points.";

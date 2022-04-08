@@ -9,8 +9,8 @@ namespace _2DGameLib.Interfaces
     public interface IWorldObjects
     {
         /// <summary>
-        /// Strategy Design Pattern & Template Design Pattern
-        /// Interface that declares the method the context (ContextChangeCreatureState)
+        /// Strategy Design Pattern
+        /// Interface that declares the method the context (Creature.cs)
         /// and concrete strategy classes implement (MakeCreatureExtraStrong & MakeCreatureFast)
         /// </summary>
         public string ChangeCreatureState();

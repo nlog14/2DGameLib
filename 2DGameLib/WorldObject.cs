@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2DGameLib
 {
-    public class WorldObject : Position
+    public class WorldObject 
     {
         public bool Lootable { get; set; }
         public string Name { get; set; }
