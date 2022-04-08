@@ -7,6 +7,8 @@
 
   <ItemGroup>
     <None Remove="AttackItem.cs~RF8b1bff.TMP" />
+    <None Remove="AttackItem.cs~RFc40f39.TMP" />
+    <None Remove="AttackItem.cs~RFde2b4e.TMP" />
     <None Remove="ChangeCreatureState\AnimalBehaviorFactory.cs~RF7caa9c.TMP" />
     <None Remove="ChangeCreatureState\DefenseItemChangeState.cs~RF19711c7.TMP" />
     <None Remove="ChangeCreatureState\DefenseItemChangeState.cs~RF1bca5c5.TMP" />
@@ -25,11 +27,20 @@
     <None Remove="Interfaces\IAttackItem.cs~RF5ceec5.TMP" />
     <None Remove="Interfaces\IDefenseItem.cs~RF14f5d64.TMP" />
     <None Remove="Interfaces\IDefenseItem.cs~RF15cd1da.TMP" />
+    <None Remove="Interfaces\IWeapon.cs~RFd63008.TMP" />
     <None Remove="MakeCreatureFast.cs~RF155eb11.TMP" />
+    <None Remove="Position.cs~RF10c56c3.TMP" />
+    <None Remove="Position.cs~RF11239b8.TMP" />
     <None Remove="ReadConfiguration.cs~RF2719e3.TMP" />
+    <None Remove="Weapons\CrossBow.cs~RFf7176e.TMP" />
+    <None Remove="Weapons\Sword.cs~RFf9ead2.TMP" />
     <None Remove="World.cs~RF689afd.TMP" />
     <None Remove="World.cs~RF802413.TMP" />
     <None Remove="WorldObject.cs~RF6d50ae.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="WeaponsFactory\" />
   </ItemGroup>
 
 </Project>

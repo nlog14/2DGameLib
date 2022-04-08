@@ -15,10 +15,16 @@ namespace _2DGameLib
         public List<CreatureStateEnum> CreatureStates { get; set; }
         public WorldObjectsEnum CurrentWorldObject { get; set; }
         public Dictionary<WorldObjectsEnum, IWorldObjects> creatureStateWithWorldObj { get; }
+        public Position PositionX { get; set; }
+        public Position PositionY { get; set; }
 
-        public Creature(CreatureStateEnum initialStateEnum = CreatureStateEnum.idle, WorldObjectsEnum initialStateWorldObject = WorldObjectsEnum.emptyHanded)
+
+        public Creature(string name, Position positionX, Position positionY, WorldObjectsEnum initialStateWorldObject = WorldObjectsEnum.emptyHanded)
         {
-            CurrentStateEnum = initialStateEnum;
+            CurrentStateEnum = CreatureStateEnum.idle;
+            Name = name;
+            this.PositionX = positionX;
+            this.PositionY = positionY;
             CreatureStates = new List<CreatureStateEnum>();
             CurrentWorldObject = initialStateWorldObject;
             creatureStateWithWorldObj = new Dictionary<WorldObjectsEnum, IWorldObjects>();
@@ -50,7 +56,7 @@ namespace _2DGameLib
         /// <param name="enemy"></param>
         public void Attack(Creature enemy)
         {
-            var attacks = attackItems.Sum(AttackItem => AttackItem.Hitpoint);
+            var attacks = attackItems.Sum(AttackItem => AttackItem.Damage);
             enemy.ReceiveHits(attacks);
         }
 
@@ -80,7 +86,7 @@ namespace _2DGameLib
         /// <param name="hit"></param>
         public void ReceiveHits(int hit)
         {
-            var defence = defenceItems.Sum(DefenceItem => DefenceItem.ReduceHitpoint);
+            var defence = defenceItems.Sum(DefenceItem => DefenceItem.Damage);
             Hitpoints -= (hit - defence);
         }
 

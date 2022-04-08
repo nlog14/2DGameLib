@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _2DGameLib.Interfaces;
 
 namespace _2DGameLib
 {
-    public class DefenseItem : WorldObject
+    public abstract class DefenseItem : WorldObject, IWeapon
     {
         /// <summary>
         /// Properties of a defense item.
         /// </summary>
-        public string Name { get; set; }
-        public int ReduceHitpoint { get; set; }
-        public string Description { get; set; }
+        public abstract string Name { get; }
+        public abstract int Damage{ get; } //-1
+        public abstract string Description { get; }
 
         public DefenseItem()
         {
 
         }
-
+        public override string ToString()
+        {
+            return $"{Name}:{Description}, dealing {Damage} damage points.";
+        }
     }
 }
