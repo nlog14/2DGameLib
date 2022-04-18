@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2DGameLib.Weapons
 {
-    class Shield : AttackItem
+    public class Shield : AttackItem
     {
         public override string Name
         {
@@ -15,7 +15,7 @@ namespace _2DGameLib.Weapons
 
         public override int Damage
         {
-            get { return 50; }
+            get { return 65; }
         }
 
         public override string Description

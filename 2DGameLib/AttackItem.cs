@@ -12,8 +12,8 @@ namespace _2DGameLib
         /// <summary>
         /// Properties of an attack item.
         /// </summary>
-        public abstract string Name { get; }
-        public abstract int Damage { get; } //+1
+       //public abstract string Name { get; }
+        public abstract int Damage { get; } //Increases points by +1
         public abstract string Description { get; }
         public abstract int Range { get; }
         

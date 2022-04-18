@@ -16,22 +16,21 @@ namespace _2DGameLib
         public List<CreatureStateEnum> CreatureStates { get; set; }
         public WorldObjectsEnum CurrentWorldObject { get; set; }
         public Dictionary<WorldObjectsEnum, IWorldObjects> creatureStateWithWorldObj { get; }
-        public Position PositionX { get; set; }
-        public Position PositionY { get; set; }
+        public Position Position { get; set; }
+        //public Position PositionY { get; set; }
 
-        public Creature(string name, Position positionX, Position positionY, WorldObjectsEnum initialStateWorldObject = WorldObjectsEnum.emptyHanded)
+        public Creature(string name, Position position, WorldObjectsEnum initialStateWorldObject = WorldObjectsEnum.emptyHanded)
         {
             CurrentStateEnum = CreatureStateEnum.idle;
             Name = name;
-            this.PositionX = positionX;
-            this.PositionY = positionY;
-            CreatureStates = new List<CreatureStateEnum>();
+            this.Position = position;
+            Hitpoints = 100;
             CurrentWorldObject = initialStateWorldObject;
             creatureStateWithWorldObj = new Dictionary<WorldObjectsEnum, IWorldObjects>();
         }
 
-        public List<AttackItem> attackItems = new List<AttackItem>();
-        public List<DefenseItem> defenceItems = new List<DefenseItem>();
+        public List<IWeapon> attackItems = new List<IWeapon>();
+        public List<IWeapon> defenceItems = new List<IWeapon>();
 
         public void SetCreaturesStateWithWorldObj(WorldObjectsEnum worldObj, IWorldObjects behavior )
         {
@@ -96,7 +95,8 @@ namespace _2DGameLib
         /// <returns></returns>
         public bool IsDead()
         {
-            Trace.ApplicationLog(TraceEventType.Information, "Oh no! you died :(");
+            if(Hitpoints is <= 0)
+            { Trace.ApplicationLog(TraceEventType.Information, $"Oh no! {Name} died :(");}
             return Hitpoints is <= 0;
         }
     }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace _2DGameLib
 {
-    public class WorldObject 
+    public abstract class WorldObject 
     {
         public bool Lootable { get; set; }
-        public string Name { get; set; }
+        public abstract string Name { get; }
         public bool Removable { get; set; }
 
         public WorldObject()

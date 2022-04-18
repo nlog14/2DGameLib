@@ -12,7 +12,7 @@ namespace _2DGameLib.WeaponsFactory
     {
         public IWeapon CreateWeapon(WeaponType type)
         {
-            if (type == WeaponType.Melee) return new Sword();
+            if (type == WeaponType.Ranged) return new Sword();
             if (type == WeaponType.Melee) return new Shield();
 
             throw new ArgumentException($"AttackWeaponFactory - no class available for weapon type {type}");

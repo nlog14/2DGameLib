@@ -29,7 +29,8 @@ namespace _2DGameLib
         public static void ApplicationLog(TraceEventType traceEventType, string message)
         {
             ts.TraceEvent(traceEventType, 555, message);
-            ts.Close();
+            //ts.Close();
+            ts.Flush();
         }
     }
 }

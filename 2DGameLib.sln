@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DGameLib", "2DGameLib\2DGameLib.csproj", "{F5951F0A-74BA-4AAC-8D34-37BE7E491529}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2DGameLib", "2DGameLib\2DGameLib.csproj", "{F5951F0A-74BA-4AAC-8D34-37BE7E491529}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2DGameFramework", "ConsoleApp2DGameFramework\ConsoleApp2DGameFramework.csproj", "{BC95EB76-1606-4858-BE6E-40F0E014CC0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F5951F0A-74BA-4AAC-8D34-37BE7E491529}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5951F0A-74BA-4AAC-8D34-37BE7E491529}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5951F0A-74BA-4AAC-8D34-37BE7E491529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC95EB76-1606-4858-BE6E-40F0E014CC0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC95EB76-1606-4858-BE6E-40F0E014CC0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC95EB76-1606-4858-BE6E-40F0E014CC0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC95EB76-1606-4858-BE6E-40F0E014CC0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿namespace _2DGameLib.Weapons
 {
-    class Sword : AttackItem
+    public class Sword : AttackItem
     {
         public override string Name
         {
@@ -9,7 +9,7 @@
 
         public override int Damage
         {
-            get { return 30; }
+            get { return 75; }
         }
 
         public override string Description

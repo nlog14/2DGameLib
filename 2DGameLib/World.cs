@@ -11,13 +11,9 @@ namespace _2DGameLib
     {
         public int MaxX { get; set; }
         public int MaxY { get; set; }
-        public Position PositionX { get; set; }
-        public Position PositionY { get; set; }
 
-        public World(Position positionX, Position positionY)
+        public World()
         {
-            this.PositionX = positionX;
-            this.PositionY = positionY;
             GetConfiguration();
         }
 

@@ -8,11 +8,11 @@ using _2DGameLib.Weapons;
 
 namespace _2DGameLib.WeaponsFactory
 {
-    class DefenseWeaponFactory : IWeaponFactory
+    public class DefenseWeaponFactory : IWeaponFactory
     {
         public IWeapon CreateWeapon(WeaponType type)
         {
-            if (type == WeaponType.Melee) return new CrossBow();
+            if (type == WeaponType.Ranged) return new CrossBow();
             if (type == WeaponType.Melee) return new Dagger();
 
             throw new ArgumentException($"DefenseWeaponFactory - no class available for weapon type {type}");
