@@ -32,11 +32,13 @@
     <None Remove="Position.cs~RF10c56c3.TMP" />
     <None Remove="Position.cs~RF11239b8.TMP" />
     <None Remove="ReadConfiguration.cs~RF2719e3.TMP" />
+    <None Remove="Weapons\CrossBow.cs~RF6f70260.TMP" />
     <None Remove="Weapons\CrossBow.cs~RFf7176e.TMP" />
     <None Remove="Weapons\Sword.cs~RFf9ead2.TMP" />
     <None Remove="World.cs~RF689afd.TMP" />
     <None Remove="World.cs~RF802413.TMP" />
     <None Remove="WorldObject.cs~RF6d50ae.TMP" />
+    <None Remove="WorldObject.cs~RF6fe972c.TMP" />
   </ItemGroup>
 
 </Project>

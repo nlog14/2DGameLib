@@ -8,13 +8,8 @@ namespace _2DGameLib
 {
     public abstract class WorldObject 
     {
-        public bool Lootable { get; set; }
-        public abstract string Name { get; }
-        public bool Removable { get; set; }
-
-        public WorldObject()
-        {
-
-        }
+        public abstract bool Lootable { get; }
+        public abstract string Name { get;}
+        public abstract bool Removable { get; }
     }
 }

@@ -16,5 +16,13 @@
         {
             get { return "The sharpest dagger ever made."; }
         }
+        public override bool Removable
+        {
+            get { return true; }
+        }
+        public override bool Lootable
+        {
+            get { return false; }
+        }
     }
 }

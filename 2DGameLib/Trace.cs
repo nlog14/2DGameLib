@@ -6,11 +6,13 @@ using System.Linq;
 using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace _2DGameLib
 {
-    class Trace
+    public class Trace
     {
+        /// <summary>
+        /// Singleton Design Pattern
+        /// </summary>
         public static TraceSource ts = new TraceSource("Application");
 
         static Trace()
@@ -24,6 +26,10 @@ namespace _2DGameLib
             TraceListener fileLog = new TextWriterTraceListener(new StreamWriter(fullPath));
             fileLog.Filter = new EventTypeFilter(SourceLevels.All);
             ts.Listeners.Add(fileLog);
+
+
+            TraceListener consoleLog = new ConsoleTraceListener();
+            ts.Listeners.Add(consoleLog);
         }
 
         public static void ApplicationLog(TraceEventType traceEventType, string message)

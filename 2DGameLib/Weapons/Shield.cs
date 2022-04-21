@@ -27,5 +27,14 @@ namespace _2DGameLib.Weapons
         {
             get { return 0; }
         }
+
+        public override bool Removable
+        {
+            get { return true; }
+        }
+        public override bool Lootable
+        {
+            get { return false; }
+        }
     }
 }

@@ -39,12 +39,6 @@ namespace _2DGameLib
                 string str = maxWorldSize.InnerText.Trim();
                 MaxWorldSize  = Convert.ToInt32(str);
             }
-
-            //XmlNode creatureName = configDoc.DocumentElement.SelectSingleNode("CreatureName");
-            //if (creatureName != null)
-            //{
-            //    string str = creatureName.InnerText.Trim();
-            //}
         }
 
     }

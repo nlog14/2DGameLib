@@ -16,5 +16,14 @@
         {
             get { return "Smoothest cross bow in existence!"; }
         }
+
+        public override bool Removable
+        {
+            get { return true; }
+        }
+        public override bool Lootable
+        {
+            get { return false; }
+        }
     }
 }

@@ -11,13 +11,12 @@ namespace _2DGameLib
     public class Creature : ICreature
     {
         public int Hitpoints { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } 
         public CreatureStateEnum CurrentStateEnum { get; set; }
         public List<CreatureStateEnum> CreatureStates { get; set; }
         public WorldObjectsEnum CurrentWorldObject { get; set; }
         public Dictionary<WorldObjectsEnum, IWorldObjects> creatureStateWithWorldObj { get; }
         public Position Position { get; set; }
-        //public Position PositionY { get; set; }
 
         public Creature(string name, Position position, WorldObjectsEnum initialStateWorldObject = WorldObjectsEnum.emptyHanded)
         {
@@ -96,8 +95,15 @@ namespace _2DGameLib
         public bool IsDead()
         {
             if(Hitpoints is <= 0)
-            { Trace.ApplicationLog(TraceEventType.Information, $"Oh no! {Name} died :(");}
+            { Trace.ApplicationLog(TraceEventType.Information, $"Oh no! {Name} died :("); }
             return Hitpoints is <= 0;
+        }
+
+        public bool IsWinner()
+        {
+            if ( Hitpoints is > 0)
+            { Trace.ApplicationLog(TraceEventType.Information, $"Yass Girl! {Name} won! :D"); }
+            return Hitpoints > 0;
         }
     }
 }
